@@ -53,14 +53,14 @@
     <div id="log-reg" class="row justify-content-around" >
         <div class="col-4">
             <h4>Zaloguj się</h4>
-            <form>
+            <form action="php/log-in/do.php" method="POST">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Login</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <input name="login" type="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Hasło</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 <button type="submit" class="btn btn-primary">Zaloguj</button>
             </form>
@@ -108,9 +108,7 @@
     <!-- /.container -->
 </footer>
 
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 
