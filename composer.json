@@ -1,0 +1,8 @@
+{
+  "autoload": {
+    "classmap": [
+      "php/log-in",
+      "php/db"
+    ]
+  }
+}
