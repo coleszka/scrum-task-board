@@ -1,23 +1,21 @@
 <?php
 
-require_once ('../db.php');
-require_once('check.php');
-require_once('input_values.php');
+require_once '../../vendor/autoload.php';
 
 
 
-$nick=$_POST['nick'];
+$login=$_POST['login'];
 $pass=$_POST['pass'];
 $pass2=$_POST['pass2'];
 $email=$_POST['email'];
-$regulations=$_POST['regulations']; ///obsluga wyjatku!!!!!!!!!!!
+$checkbox=$_POST['checkbox']; ///obsluga wyjatku!!!!!!!!!!!
 
 
-$reg = new Register($nick, $pass, $pass2, $email, $regulations);
+$reg = new Register($login, $pass, $pass2, $email, $checkbox);
 if (!$reg->checkValues())
     {
         $input = new Input();
-        $input->inputValuesToDb($nick, $pass, $pass2, $email, $regulations);
+        $input->inputValuesToDb($login, $pass, $email);
     }
     else
     {

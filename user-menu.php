@@ -68,8 +68,7 @@ require_once ('php/session/check_log_in.php');
 <div class="container">
 
     <div class="user-content">
-
-
+        <h3>Wybierz pozycję z menu po lewej stronie. </h3>
 
     </div>
 

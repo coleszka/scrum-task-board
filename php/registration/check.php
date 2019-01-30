@@ -6,15 +6,15 @@ class Register
     public $pass;
     public $pass2;
     public $email;
-    public $regulations;
+    public $checkbox;
 
-    public function __construct(string $nick, string $pass, string $pass2, string $email, $regulations)
+    public function __construct(string $nick, string $pass, string $pass2, string $email, $checkbox)
     {
         $this->nick=$nick;
         $this->pass=$pass;
         $this->pass2=$pass2;
         $this->email=$email;
-        $this->regulations=$regulations;
+        $this->checkbox=$checkbox;
     }
 
     public function checkValues(){
@@ -37,7 +37,7 @@ class Register
         {
             $err[]="Email powinien zawierac od 3 do 20 znakow";
         }
-        if ($this->regulations==NULL)
+        if ($this->checkbox==NULL)
         {
             $err[]="Aby dokonać rejestracji należy zaznaczyć przeczytanie regulaminu";
         }
