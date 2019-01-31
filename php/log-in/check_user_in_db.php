@@ -3,16 +3,18 @@
 class UserInDb extends Db
 {
 
-    private $nick;
+    private $login;
     private $pass;
 
-    public function __construct(string $nick, string $pass) {
-        $this->nick=$nick;
+    public function __construct(string $login, string $pass) {
+        $this->login=$login;
         $this->pass=$pass;
     }
 
     public function checkUser() {
-        $result = $this->connect()->prepare("SELECT id, login, password FROM users WHERE login='$this->nick' AND password='$this->pass'");
+
+        $this->pass=md5($this->pass);
+        $result = $this->connect()->prepare("SELECT id, login, password FROM users WHERE login='{$this->login}' AND password='{$this->pass}'");
         $result->execute();
         $numRows = $result->rowCount();
 
@@ -28,7 +30,7 @@ class UserInDb extends Db
         }
         else
         {
-            echo "Nick lub hasło są niepoprawne! Spróbuj jeszcze raz.";
+            echo "Login lub hasło są niepoprawne! Spróbuj jeszcze raz.";
             header( "refresh:1;url=../../index.php" );
         }
     }

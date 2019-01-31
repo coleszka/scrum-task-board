@@ -1,51 +1,69 @@
 <?php
 
-class Register
+class Register extends Db
 {
-    public $nick;
+    public $login;
     public $pass;
     public $pass2;
     public $email;
     public $checkbox;
 
-    public function __construct(string $nick, string $pass, string $pass2, string $email, $checkbox)
-    {
-        $this->nick=$nick;
+    public function __construct(string $login, string $pass, string $pass2, string $email, $checkbox) {
+        $this->login=$login;
         $this->pass=$pass;
         $this->pass2=$pass2;
         $this->email=$email;
         $this->checkbox=$checkbox;
     }
 
-    public function checkValues(){
+    public function checkValues() :array {
 
         $err=array();
 
-        if (strlen($this->nick) < 3 || strlen($this->nick) > 20)
-        {
-        $err[]="Nick powinien zawierac od 3 do 20 znakow";
+        if (strlen($this->login) < 3 || strlen($this->login) > 20) {
+        $err[]="login powinien zawierac od 3 do 20 znakow";
         }
-        if (strlen($this->pass) < 6)
-        {
+        if (strlen($this->pass) < 6) {
             $err[]="Hasło powinno zawierac conajmniej 6 znaków";
         }
-        if ($this->pass!=$this->pass2)
-        {
+        if ($this->pass!=$this->pass2) {
             $err[]="Hasła nie są jednakowe!";
         }
-        if (strlen($this->email) < 3 || strlen($this->email) > 20)
-        {
+        if (strlen($this->email) < 3 || strlen($this->email) > 20) {
             $err[]="Email powinien zawierac od 3 do 20 znakow";
         }
-        if ($this->checkbox==NULL)
-        {
+        if ($this->checkbox==NULL) {
             $err[]="Aby dokonać rejestracji należy zaznaczyć przeczytanie regulaminu";
         }
+        try {
+            $result = $this->connect()->prepare("SELECT * FROM users WHERE login='{$this->login}'");
+            $result->execute();
 
+            $row = $result->rowCount();
+
+            if ($row > 0) {
+                $err[]="Użytkownik z podanym loginem już istnieje";
+            }
+        }
+        catch (Exception $e) {
+            echo 'Caught exception: ',  $e->getMessage(), "\n";
+            echo "Wystąpił problem 1";
+        }
+        try {
+            $result = $this->connect()->prepare("SELECT * FROM users WHERE email='{$this->email}'");
+            $result->execute();
+
+            $row = $result->rowCount();
+
+            if ($row > 0) {
+                $err[]="Użytkownik z podanym e-mailem już istnieje";
+            }
+        }
+        catch (Exception $e) {
+            //echo 'Caught exception: ',  $e->getMessage(), "\n";
+            echo "Wystąpił problem 2";
+        }
         return $err;
-
-
-
     }
 }
 

@@ -2,12 +2,10 @@
 
 session_start();
 
-    if (isset($_SESSION['id']) && isset($_SESSION['login']))
-    {
+    if (isset($_SESSION['id']) && isset($_SESSION['login'])) {
         //echo "zalogowany";
     }
-    else
-    {
+    else {
         header('Location: index.php');
     }
 ?>

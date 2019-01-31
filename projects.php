@@ -75,7 +75,7 @@ $myProjects = new MyProjects();
         <hr>
 
         <a class="btn btn-primary" href="projects/new-project.php" role="button">+ Nowy projekt</a>
-        <br>
+        <br><br>
         <?php
             $myProjects->showMyProjects();
         ?>

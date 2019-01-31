@@ -18,8 +18,7 @@
 </head>
 
 <body>
-
-
+<link rel="html-import" href="index.html" >
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
