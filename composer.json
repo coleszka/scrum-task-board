@@ -3,7 +3,9 @@
     "classmap": [
       "php/log-in",
       "php/db",
-      "php/registration"
+      "php/registration",
+      "php/projects/add_project",
+      "php/projects"
     ]
   }
 }

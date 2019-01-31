@@ -1,5 +1,8 @@
 <?php
 require_once ('php/session/check_log_in.php');
+require_once ('vendor/autoload.php');
+$myProjects = new MyProjects();
+
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -68,9 +71,16 @@ require_once ('php/session/check_log_in.php');
 <div class="container">
 
     <div class="user-content">
-        <h5>Wybierz pozycję z menu po lewej stronie. </h5>
+        <h3>Projekty</h3>
+        <hr>
 
+        <a class="btn btn-primary" href="projects/new-project.php" role="button">+ Nowy projekt</a>
+        <br>
+        <?php
+            $myProjects->showMyProjects();
+        ?>
     </div>
+
 
     <div id="wrapper">
 
