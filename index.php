@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,6 +65,10 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Zaloguj</button>
             </form>
+            <br>
+            <?php
+            include ("php/log-in/alerts.php");
+            ?>
         </div>
         <div class="col-4">
             <h4>Zarejestruj się</h4>
@@ -88,6 +95,10 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Zarejestruj się</button>
             </form>
+            <br>
+            <?php
+            include ("php/registration/alerts.php");
+            ?>
         </div>
     </div>
 

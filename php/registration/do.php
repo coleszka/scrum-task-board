@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once '../../vendor/autoload.php';
 
 $login=$_POST['login'];
@@ -14,8 +14,9 @@ if (!$reg->checkValues()) {
         $input->inputValuesToDb($login, $pass, $email);
     }
     else {
-        echo "errory";
-        var_dump($reg->checkValues());
+        //echo "errory";
+        $_SESSION['errReg']=$reg->checkValues();
+        header("Location: ../../index.php");
     }
 
 

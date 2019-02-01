@@ -30,8 +30,8 @@ class UserInDb extends Db
         }
         else
         {
-            echo "Login lub hasło są niepoprawne! Spróbuj jeszcze raz.";
-            header( "refresh:1;url=../../index.php" );
+            $_SESSION['errLog'] = "Login lub hasło są niepoprawne! Spróbuj jeszcze raz.";
+            header( "Location: ../../index.php" );
         }
     }
 }
