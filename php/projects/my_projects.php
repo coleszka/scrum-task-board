@@ -11,9 +11,9 @@ class MyProjects extends Db
 
             if ($row > 0) {
                 $i=1;
-                echo "<table class=\"table\"><thead><tr><th scope=\"col\">#</th><th scope=\"col\">Nazwa</th><th scope=\"col\">Opis</th></tr></thead><tbody>";
-                while ($row = $result->fetch(PDO::FETCH_ASSOC)){
-                    echo "<tr><th scope=\"row\">".$i++."</th><td>".$row['name_project']."</td><td>".$row['description']."</td></tr>";
+                echo "<table class=\"table\"><thead><tr><th scope=\"col\">#</th><th scope=\"col\">Nazwa</th><th scope=\"col\">Opis</th><th scope=\"col\"></th></tr></thead><tbody>";
+                while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<tr><th scope=\"row\">".$i++."</th><td>".$row['name_project']."</td><td>".$row['description']."</td><td><a class=\"btn btn-success\" href=\"projects/project.php?id=".$row['id']."\" role=\"button\">Otwórz</a></td></tr>";
                 }
                 echo "</table>";
             }

@@ -10,6 +10,7 @@ return array(
     'Db' => $baseDir . '/php/db/db.php',
     'Input' => $baseDir . '/php/registration/input_values.php',
     'MyProjects' => $baseDir . '/php/projects/my_projects.php',
+    'ProjectDetails' => $baseDir . '/php/projects/show_project.php',
     'Register' => $baseDir . '/php/registration/check.php',
     'UserInDb' => $baseDir . '/php/log-in/check_user_in_db.php',
 );
