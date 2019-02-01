@@ -81,6 +81,10 @@ require_once ('../php/session/check_log_in.php');
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        <br>
+        <?php
+        include("../php/projects/add_project/alerts.php");
+        ?>
 
     </div>
 
