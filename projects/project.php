@@ -5,6 +5,8 @@ require_once('../vendor/autoload.php');
 $project = new ProjectDetails($_GET['id']);
 $details=$project->details();
 
+$table=new UsersThisProject($_GET['id']);
+
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -81,6 +83,11 @@ $details=$project->details();
                 echo "<div class=\"alert alert-danger\" role=\"alert\">Nie masz dostępu do tego projektu!</div>";
             }
         ?>
+        <h5>Zespół</h5>
+        <a class="btn btn-info" href="#" role="button">+ Otwórz TaskBoard</a>
+        <a class="btn btn-success" href="add-user.php?project=<?php echo $_GET['id']?>" role="button">+ Dodaj członka</a>
+        <br><br>
+        <?php $table->showMembers();?>
     </div>
 
 

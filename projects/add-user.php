@@ -1,5 +1,8 @@
 <?php
 require_once ('../php/session/check_log_in.php');
+require_once('../vendor/autoload.php');
+
+
 
 ?>
 <!DOCTYPE html>
@@ -69,24 +72,20 @@ require_once ('../php/session/check_log_in.php');
 <div class="container">
 
     <div class="user-content">
-        <h3>Nowy projekt</h3>
+        <h3>Dodaj członka</h3>
         <hr>
-        <form method="post" action="../php/projects/add_project/do.php">
+        <form method="get" action="../php/projects/add_user/do.php">
             <div class="form-group">
-                <label for="exampleFormControlInput1">Nazwa</label>
+                <label for="exampleFormControlInput1">Nazwa użytkownika</label>
                 <input name="name" class="form-control" id="exampleFormControlInput1" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Opis</label>
-                <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <input name="project" value="<?php echo $_GET['project']?>" type="hidden">
             </div>
             <button type="submit" class="btn btn-primary">Dodaj</button>
         </form>
         <br>
         <?php
-        include("../php/projects/add_project/alerts.php");
+        include("../php/projects/add_user/alerts.php");
         ?>
-
     </div>
 
 

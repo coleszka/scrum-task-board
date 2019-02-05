@@ -32,8 +32,6 @@ class Db{
         //$conn = new mysqli($this->server, $this->name, $this->password, $this->dbname);
         //return $conn;
     }
-
-
 }
 
 ?>
