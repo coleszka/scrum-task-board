@@ -142,3 +142,15 @@ li > img {
     margin-left: 75px;
     padding: 15px;
 }
+
+.col-sm, .col-xs-6, .col-sm-3, .col {
+    background-color: #E5E5E5;
+    border: darkgrey solid 1px;
+    text-align: center;
+}
+
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}

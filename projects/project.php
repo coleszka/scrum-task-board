@@ -84,7 +84,7 @@ $table=new UsersThisProject($_GET['id']);
             }
         ?>
         <h5>Zespół</h5>
-        <a class="btn btn-info" href="#" role="button">+ Otwórz TaskBoard</a>
+        <a class="btn btn-info" href="task-board.php?project=<?php echo $_GET['id']?>" role="button">+ Otwórz TaskBoard</a>
         <a class="btn btn-success" href="add-user.php?project=<?php echo $_GET['id']?>" role="button">+ Dodaj członka</a>
         <br><br>
         <?php $table->showMembers();?>
