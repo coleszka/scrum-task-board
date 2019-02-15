@@ -1,10 +1,10 @@
 <?php
-if (isset($_SESSION['errProject'])) {
-    echo "<div class=\"alert alert-danger\" role=\"alert\">".$_SESSION['errProject']."</div>";
-    unset($_SESSION['errProject']);
+if (isset($_SESSION['errStories'])) {
+    echo "<div class=\"alert alert-danger\" role=\"alert\">".$_SESSION['errStories']."</div>";
+    unset($_SESSION['errStories']);
 }
-elseif (isset($_SESSION['succProject'])) {
-    echo "<div class=\"alert alert-success\" role=\"alert\">".$_SESSION['succProject']."</div>";
-    unset($_SESSION['succProject']);
+elseif (isset($_SESSION['succStories'])) {
+    echo "<div class=\"alert alert-success\" role=\"alert\">".$_SESSION['succStories']."</div>";
+    unset($_SESSION['succStories']);
 }
 ?>

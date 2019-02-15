@@ -81,15 +81,19 @@ $details=$project->details();
         }
         ?>
         <form method="POST" action="../php/projects/add_stories/do.php">
-            <div style="width: 200px;" class="input-group">
+            <div style="max-width: 800px;" class="input-group">
 
-                <input style="margin-right: 1px;" name="nameStories" class="form-control" id="exampleFormControlInput1" placeholder="Nowe stories">
+                <input style="margin-right: 1px; max-width: 30%; border-right: none" name="nameStories" class="form-control" id="exampleFormControlInput1" placeholder="Nazwa stories">
+                <input style="margin-right: 1px;" name="descStories" class="form-control" id="exampleFormControlInput1" placeholder="Opis stories">
                 <input name="project" value="<?php echo $_GET['project']?>" type="hidden">
                 <span class="input-group-btn" style="">
                     <button type="submit" class="btn btn-success">+</button>
                 </span>
             </div>
         </form>
+        <?php
+        include("../php/projects/add_stories/alerts.php");
+        ?>
         <br>
         <div class="row" style="padding: 50px; padding-top: 10px;">
             <div id="1-col" class="col" style="background-color: white">
