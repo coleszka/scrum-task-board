@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AddProject' => $baseDir . '/php/projects/add_project/add_project.php',
+    'AddStories' => $baseDir . '/php/projects/add_stories/add_stories.php',
     'AddUser' => $baseDir . '/php/projects/add_user/add_user.php',
     'Db' => $baseDir . '/php/db/db.php',
     'Input' => $baseDir . '/php/registration/input_values.php',

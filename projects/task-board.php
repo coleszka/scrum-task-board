@@ -1,6 +1,9 @@
 <?php
-require_once ('../php/session/check_log_in.php');
+require_once('../php/session/check_log_in.php');
+require_once('../vendor/autoload.php');
 
+$project = new ProjectDetails($_GET['project']);
+$details=$project->details();
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -69,8 +72,25 @@ require_once ('../php/session/check_log_in.php');
 <div class="container">
     <div class="user-content" >
 
-        <h3><?php echo $_GET['project']?></h3>
-        <hr>
+        <?php
+        if ($project->existProject()==true) {
+            echo "<h3>".$details['name']."</h3><h5>".$details['description']."</h5><hr>";
+        }
+        else {
+            echo "<div class=\"alert alert-danger\" role=\"alert\">Nie masz dostępu do tego projektu!</div>";
+        }
+        ?>
+        <form method="POST" action="../php/projects/add_stories/do.php">
+            <div style="width: 200px;" class="input-group">
+
+                <input style="margin-right: 1px;" name="nameStories" class="form-control" id="exampleFormControlInput1" placeholder="Nowe stories">
+                <input name="project" value="<?php echo $_GET['project']?>" type="hidden">
+                <span class="input-group-btn" style="">
+                    <button type="submit" class="btn btn-success">+</button>
+                </span>
+            </div>
+        </form>
+        <br>
         <div class="row" style="padding: 50px; padding-top: 10px;">
             <div id="1-col" class="col" style="background-color: white">
                 <h5>Stories</h5>
@@ -98,98 +118,77 @@ require_once ('../php/session/check_log_in.php');
             </div>
             <div id="2-col" class="col">
                 <div class="card text-white bg-secondary mb-3" style="max-width: 8rem; margin-top: 5px;">
-                    <div class="card-body" style="padding: 5px 10px 5px 10px;">
+                    <div class="card-body" style="padding: 5px 7px 5px 7px;">
                         <p class="card-text" style="font-size: 12px; margin: 0px;">Some quick example text to build on the card title.</p>
                         <div class="btn-group">
                             <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Akcja
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Wykonane</a>
+                                <a class="dropdown-item" href="#">Testowanie</a>
+                                <a class="dropdown-item" href="#">Ukończone</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <form method="get" action="">
+                    <div style="max-width: 180px;" class="input-group">
+
+                        <input style="margin-right: 1px;" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Nowe zadanie">
+                        <input name="project" value="<?php echo $_GET['project']?>" type="hidden">
+                        <span class="input-group-btn" style="">
+                    <button type="submit" class="btn btn-success">+</button>
+                </span>
+                    </div>
+                </form>
             </div>
             <div id="3-col" class="col">
                 <div class="card text-white bg-secondary mb-3" style="max-width: 8rem; margin-top: 5px;">
-                    <div class="card-body" style="padding: 5px 10px 5px 10px;">
+                    <div class="card-body" style="padding: 5px 7px 5px 7px;">
                         <p class="card-text" style="font-size: 12px; margin: 0px;">Some quick example text to build on the card title.</p>
                         <div class="btn-group">
                             <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Akcja
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card text-white bg-secondary mb-3" style="max-width: 8rem; margin-top: 5px;">
-                    <div class="card-body" style="padding: 5px 10px 5px 10px;">
-                        <p class="card-text" style="font-size: 12px; margin: 0px;">Some quick example text to build on the card title.</p>
-                        <div class="btn-group">
-                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Akcja
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card text-white bg-secondary mb-3" style="max-width: 8rem; margin-top: 5px;">
-                    <div class="card-body" style="padding: 5px 10px 5px 10px;">
-                        <p class="card-text" style="font-size: 12px; margin: 0px;">Some quick example text to build on the card title.</p>
-                        <div class="btn-group">
-                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Akcja
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Do wykonania</a>
+                                <a class="dropdown-item" href="#">Testowanie</a>
+                                <a class="dropdown-item" href="#">Ukończone</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="4-col" class="col">
-
-            </div>
-            <div id="5-col" class="col">
                 <div class="card text-white bg-secondary mb-3" style="max-width: 8rem; margin-top: 5px;">
-                    <div class="card-body" style="padding: 5px 10px 5px 10px;">
+                    <div class="card-body" style="padding: 5px 7px 5px 7px;">
                         <p class="card-text" style="font-size: 12px; margin: 0px;">Some quick example text to build on the card title.</p>
                         <div class="btn-group">
                             <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Akcja
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Do wykonania</a>
+                                <a class="dropdown-item" href="#">Wykonane</a>
+                                <a class="dropdown-item" href="#">Ukończone</a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id="5-col" class="col">
                 <div class="card text-white bg-secondary mb-3" style="max-width: 8rem; margin-top: 5px;">
-                    <div class="card-body" style="padding: 5px 10px 5px 10px;">
+                    <div class="card-body" style="padding: 5px 7px 5px 7px;">
                         <p class="card-text" style="font-size: 12px; margin: 0px;">Some quick example text to build on the card title.</p>
                         <div class="btn-group">
                             <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Akcja
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Do wykonania</a>
+                                <a class="dropdown-item" href="#">Wykonane</a>
+                                <a class="dropdown-item" href="#">Testowanie</a>
                             </div>
                         </div>
                     </div>
