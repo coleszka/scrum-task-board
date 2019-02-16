@@ -168,11 +168,15 @@ END;
 
                         <input style="margin-right: 1px;" name="description" class="form-control" id="exampleFormControlInput1" placeholder="Nowe zadanie">
                         <input name="idStories" value="69" type="hidden">
+                        <input name="project" value="<?php echo $_GET['project']?>" type="hidden">
                         <span class="input-group-btn" style="">
                     <button type="submit" class="btn btn-success">+</button>
                 </span>
                     </div>
                 </form>
+                <?php
+                include("../php/projects/add_task/alerts.php");
+                ?>
             </div>
             <div id="3-col" class="col">
                 <div class="card text-white bg-secondary mb-3" style="max-width: 8rem; margin-top: 5px;">
