@@ -4,8 +4,11 @@ require_once('../vendor/autoload.php');
 
 $project = new ProjectDetails($_GET['project']);
 $detailsProject=$project->details();
+
 $stories = new ShowStories($_GET['project']);
 $detailsStories=$stories->stories();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -119,7 +122,7 @@ $detailsStories=$stories->stories();
 
             //var_dump($detailsStories);
 
-           for ($i=0; $i < $detailsStories['rows']; $i++) {
+           /*for ($i=0; $i < $detailsStories['rows']; $i++) {
                 echo <<<END
                 <div class="w-100"></div>
                 <div id="1-col" class="col">
@@ -133,7 +136,7 @@ $detailsStories=$stories->stories();
 END;
             }
 
-            ?>
+            */?>
 
 
             <div id="1-col" class="col">
@@ -160,11 +163,11 @@ END;
                         </div>
                     </div>
                 </div>
-                <form method="get" action="">
+                <form method="post" action="../php/projects/add_task/do.php">
                     <div style="max-width: 180px;" class="input-group">
 
-                        <input style="margin-right: 1px;" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Nowe zadanie">
-                        <input name="project" value="<?php echo $_GET['project']?>" type="hidden">
+                        <input style="margin-right: 1px;" name="description" class="form-control" id="exampleFormControlInput1" placeholder="Nowe zadanie">
+                        <input name="idStories" value="69" type="hidden">
                         <span class="input-group-btn" style="">
                     <button type="submit" class="btn btn-success">+</button>
                 </span>

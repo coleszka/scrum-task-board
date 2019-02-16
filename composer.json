@@ -8,7 +8,8 @@
       "php/projects",
       "php/projects/add_user",
       "php/projects/add_stories",
-      "php/taskboard"
+      "php/taskboard",
+      "php/projects/add_task"
     ]
   }
 }

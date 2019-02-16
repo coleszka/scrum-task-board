@@ -9,6 +9,7 @@ class ComposerStaticInita96c6dbc01e1938c115addac96809d55
     public static $classMap = array (
         'AddProject' => __DIR__ . '/../..' . '/php/projects/add_project/add_project.php',
         'AddStories' => __DIR__ . '/../..' . '/php/projects/add_stories/add_stories.php',
+        'AddTask' => __DIR__ . '/../..' . '/php/projects/add_task/add_task.php',
         'AddUser' => __DIR__ . '/../..' . '/php/projects/add_user/add_user.php',
         'Db' => __DIR__ . '/../..' . '/php/db/db.php',
         'Input' => __DIR__ . '/../..' . '/php/registration/input_values.php',
