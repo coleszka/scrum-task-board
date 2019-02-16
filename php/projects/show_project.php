@@ -18,8 +18,8 @@ class ProjectDetails extends Db
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                    $this->id = $row['id'];
                    $this->idUser = $row['id_user'];
-                   $this->nameProject = $row['name_project'];
-                   $this->description = $row['description'];
+                   $this->nameProject = $row['name_project']; //moze bez []
+                   $this->description = $row['description'];  //moze bez []
                 }
             }
         }

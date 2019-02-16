@@ -3,7 +3,9 @@ require_once('../php/session/check_log_in.php');
 require_once('../vendor/autoload.php');
 
 $project = new ProjectDetails($_GET['project']);
-$details=$project->details();
+$detailsProject=$project->details();
+$stories = new ShowStories($_GET['project']);
+$detailsStories=$stories->stories();
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -74,7 +76,7 @@ $details=$project->details();
 
         <?php
         if ($project->existProject()==true) {
-            echo "<h3>".$details['name']."</h3><h5>".$details['description']."</h5><hr>";
+            echo "<h3>".$detailsProject['name']."</h3><h5>".$detailsProject['description']."</h5><hr>";
         }
         else {
             echo "<div class=\"alert alert-danger\" role=\"alert\">Nie masz dostępu do tego projektu!</div>";
@@ -112,6 +114,28 @@ $details=$project->details();
                 <h5>Ukończone</h5>
             </div>
             <div class="w-100"></div>
+
+            <?php
+
+            //var_dump($detailsStories);
+
+           for ($i=0; $i < $detailsStories['rows']; $i++) {
+                echo <<<END
+                <div class="w-100"></div>
+                <div id="1-col" class="col">
+                            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; margin-top: 5px;">
+                                <div class="card-header">{$detailsStories['nameStories'][$i]}</div>
+                                <div class="card-body">
+                                    <p class="card-text">{$detailsStories['descStories'][$i]}</p>
+                                </div>
+                            </div>
+                        </div>
+END;
+            }
+
+            ?>
+
+
             <div id="1-col" class="col">
                 <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; margin-top: 5px;">
                     <div class="card-header">Header</div>
