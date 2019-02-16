@@ -100,6 +100,95 @@ $detailsStories=$stories->stories();
         include("../php/projects/add_stories/alerts.php");
         ?>
         <br>
+
+        <?php
+
+        $tabela[3]='<a class="dropdown-item" href="#">Do wykonania</a>
+                                <a class="dropdown-item" href="#">Testowanie</a>
+                                <a class="dropdown-item" href="#">Ukończone</a>';
+        $tabela[4]='<a class="dropdown-item" href="#">Do wykonania</a>
+                                <a class="dropdown-item" href="#">Wykonane</a>
+                                <a class="dropdown-item" href="#">Ukończone</a>';
+        $tabela[5]='<a class="dropdown-item" href="#">Do wykonania</a>
+                                <a class="dropdown-item" href="#">Wykonane</a>
+                                <a class="dropdown-item" href="#">Testowanie</a>';
+
+        echo '<div class="row" style="padding: 50px; padding-top: 10px;">';
+        for ($i=1;$i<6;$i++) {
+            switch ($i) {
+                case 1:
+                    echo <<<END
+<div id="{$i}-col" class="col">
+                <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; margin-top: 5px;">
+                    <div class="card-header">{$i}</div>
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title.</p>
+                    </div>
+                </div>
+            </div>
+END;
+                    break;
+                case 2:
+                    echo <<<END
+<div id="{$i}-col" class="col">
+                <div class="card text-white bg-secondary mb-3" style="max-width: 8rem; margin-top: 5px;">
+                    <div class="card-body" style="padding: 5px 7px 5px 7px;">
+                        <p class="card-text" style="font-size: 12px; margin: 0px;">Some quick example text to build on the card title.</p>
+                        <div class="btn-group">
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Akcja
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Wykonane</a>
+                                <a class="dropdown-item" href="#">Testowanie</a>
+                                <a class="dropdown-item" href="#">Ukończone</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form method="post" action="../php/projects/add_task/do.php">
+                    <div style="max-width: 180px;" class="input-group">
+
+                        <input style="margin-right: 1px;" name="description" class="form-control" id="exampleFormControlInput1" placeholder="Nowe zadanie">
+                        <input name="idStories" value="{$i}" type="hidden">
+                        <input name="project" value="{$_GET['project']}" type="hidden">
+                        <span class="input-group-btn" style="">
+                    <button type="submit" class="btn btn-success">+</button>
+                </span>
+                    </div>
+                </form>
+END;
+                include("../php/projects/add_task/alerts.php");
+                echo '</div>';
+            break;
+                default:
+                    echo <<<END
+<div id="{$i}-col" class="col">
+                <div class="card text-white bg-secondary mb-3" style="max-width: 8rem; margin-top: 5px;">
+                    <div class="card-body" style="padding: 5px 7px 5px 7px;">
+                        <p class="card-text" style="font-size: 12px; margin: 0px;">Some quick example text to build on the card title.</p>
+                        <div class="btn-group">
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Akcja
+                            </button>
+                            <div class="dropdown-menu">
+                                {$tabela[$i]}
+                                <a class="dropdown-item" style="display: none" href="#">TEST</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+END;
+                    break;
+            }
+
+
+
+        }
+        echo '</div>'
+        ?>
+
         <div class="row" style="padding: 50px; padding-top: 10px;">
             <div id="1-col" class="col" style="background-color: white">
                 <h5>Stories</h5>
@@ -136,7 +225,11 @@ $detailsStories=$stories->stories();
 END;
             }
 
-            */?>
+            */
+
+
+
+           ?>
 
 
             <div id="1-col" class="col">
@@ -190,6 +283,7 @@ END;
                                 <a class="dropdown-item" href="#">Do wykonania</a>
                                 <a class="dropdown-item" href="#">Testowanie</a>
                                 <a class="dropdown-item" href="#">Ukończone</a>
+                                <a class="dropdown-item" style="display: none" href="#">TEST</a>
                             </div>
                         </div>
                     </div>
