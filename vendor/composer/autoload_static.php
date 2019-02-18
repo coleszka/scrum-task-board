@@ -17,6 +17,7 @@ class ComposerStaticInita96c6dbc01e1938c115addac96809d55
         'ProjectDetails' => __DIR__ . '/../..' . '/php/projects/show_project.php',
         'Register' => __DIR__ . '/../..' . '/php/registration/check.php',
         'ShowStories' => __DIR__ . '/../..' . '/php/taskboard/show_stories.php',
+        'ShowTasks' => __DIR__ . '/../..' . '/php/taskboard/show_tasks.php',
         'UserInDb' => __DIR__ . '/../..' . '/php/log-in/check_user_in_db.php',
         'UsersThisProject' => __DIR__ . '/../..' . '/php/projects/users_this_project.php',
     );
