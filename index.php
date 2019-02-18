@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once ('php/session/check_logged_index.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
