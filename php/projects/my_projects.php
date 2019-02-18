@@ -18,7 +18,7 @@ class MyProjects extends Db
                 echo "</table>";
             }
         }
-        catch (Exception $e) {
+        catch (PDOException $e) {
             //echo 'Caught exception: ',  $e->getMessage(), "\n";
             echo "Wystąpił problem z wyświetleniem projektów";
         }

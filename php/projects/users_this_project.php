@@ -23,8 +23,8 @@ class UsersThisProject extends Db
                 echo "</table>";
             }
         }
-        catch (Exception $e) {
-            echo 'Caught exception: ',  $e->getMessage(), "\n";
+        catch (PDOException $e) {
+            //echo 'Caught exception: ',  $e->getMessage(), "\n";
             echo "Wystąpił problem z wyświetleniem członków projektu";
         }
     }

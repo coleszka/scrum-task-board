@@ -1,7 +1,7 @@
 <?php
 
-class Db{
-
+class Db
+{
     private $server;
     private $name;
     private $password;
@@ -15,22 +15,16 @@ class Db{
         $this->dbname="scrumtb";
         $this->charset="utf8mb4";
 
-        try
-        {
+        try {
             $param_pdo = "mysql:host=".$this->server.";dbname=".$this->dbname.";charset=".$this->charset;
             $pdo = new PDO($param_pdo, $this->name, $this->password);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $pdo;
         }
-        catch (PDOException $e)
-        {
+        catch (PDOException $e) {
             //echo "Connection failed: ".$e->getMessage();
             echo "Wystąpił problem z połączeniem z bazą #1DB";
         }
-
-
-        //$conn = new mysqli($this->server, $this->name, $this->password, $this->dbname);
-        //return $conn;
     }
 }
 

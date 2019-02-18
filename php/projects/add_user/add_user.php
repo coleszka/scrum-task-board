@@ -1,6 +1,7 @@
 <?php
 
-class AddUser extends Db {
+class AddUser extends Db
+{
     private $getUserName;
     private $getIdProject;
     private $userIdAdding;

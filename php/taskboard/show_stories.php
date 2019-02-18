@@ -24,7 +24,7 @@ class ShowStories extends Db
                 }
             }
         }
-        catch (Exception $e) {
+        catch (PDOException $e) {
             //echo 'Caught exception: ',  $e->getMessage(), "\n";
             echo "Wystąpił problem z wyświetleniem stories.";
         }
@@ -35,7 +35,5 @@ class ShowStories extends Db
             'idStories' => $this->idStories, 'rows' =>$this->rows];
         return $stories;
     }
-
 }
-
 ?>

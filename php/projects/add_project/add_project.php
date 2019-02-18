@@ -2,10 +2,6 @@
 
 class AddProject extends Db
 {
-    public function __construct() {
-
-    }
-
     public function inputNewProjectToDb(string $id_user, string $name_project, string $description) {
 
         try {

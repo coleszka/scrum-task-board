@@ -24,8 +24,8 @@ class ShowTasks extends Db
                 }
             }
         }
-        catch (Exception $e) {
-            echo 'Caught exception: ',  $e->getMessage(), "\n";
+        catch (PDOException $e) {
+            //echo 'Caught exception: ',  $e->getMessage(), "\n";
             echo "Wystąpił problem z wyświetleniem tasks.";
         }
     }
@@ -34,7 +34,5 @@ class ShowTasks extends Db
         $tasks=['descTask' => $this->descTask, 'idTask' => $this->id, 'rows' => $this->rows];
         return $tasks;
     }
-
 }
-
 ?>
