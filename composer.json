@@ -9,6 +9,7 @@
       "php/projects/add_user",
       "php/projects/add_stories",
       "php/taskboard",
+      "php/taskboard/update_task_timeline",
       "php/projects/add_task"
     ]
   }

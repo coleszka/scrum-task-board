@@ -19,7 +19,7 @@ class ShowTasks extends Db
 
             if ($this->rows > 0) {
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                   $this->id = $row['id'];
+                   $this->id[] = $row['id'];
                    $this->descTask[] = $row['description'];
                 }
             }
@@ -31,7 +31,7 @@ class ShowTasks extends Db
     }
 
     public function tasks() :array {
-        $tasks=['descTask' => $this->descTask, 'rows' => $this->rows];
+        $tasks=['descTask' => $this->descTask, 'idTask' => $this->id, 'rows' => $this->rows];
         return $tasks;
     }
 

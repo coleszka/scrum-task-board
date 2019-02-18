@@ -17,6 +17,7 @@ return array(
     'Register' => $baseDir . '/php/registration/check.php',
     'ShowStories' => $baseDir . '/php/taskboard/show_stories.php',
     'ShowTasks' => $baseDir . '/php/taskboard/show_tasks.php',
+    'UpdateTimeline' => $baseDir . '/php/taskboard/update_task_timeline/update_timeline.php',
     'UserInDb' => $baseDir . '/php/log-in/check_user_in_db.php',
     'UsersThisProject' => $baseDir . '/php/projects/users_this_project.php',
 );

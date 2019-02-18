@@ -122,9 +122,24 @@ END;
                                 Akcja
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Wykonane</a>
-                                <a class="dropdown-item" href="#">Testowanie</a>
-                                <a class="dropdown-item" href="#">Ukończone</a>
+                                <form method="post" action="../php/taskboard/update_task_timeline/do.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="toTimeline" value="2" type="hidden">
+                                <input name="idTask" value="{$toDoTask['idTask'][$i]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Wykonane</button>
+                                </form>
+                                <form method="post" action="../php/taskboard/update_task_timeline/do.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="toTimeline" value="3" type="hidden">
+                                <input name="idTask" value="{$toDoTask['idTask'][$i]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Testowanie</button>
+                                </form>
+                                <form method="post" action="../php/taskboard/update_task_timeline/do.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="toTimeline" value="4" type="hidden">
+                                <input name="idTask" value="{$toDoTask['idTask'][$i]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Ukończone</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -157,10 +172,24 @@ END;
                                 Akcja
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Do wykonania</a>
-                                <a class="dropdown-item" href="#">Testowanie</a>
-                                <a class="dropdown-item" href="#">Ukończone</a>
-                                <a class="dropdown-item" style="display: none" href="#">TEST</a>
+                                <form method="post" action="../php/taskboard/update_task_timeline/do.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="toTimeline" value="1" type="hidden">
+                                <input name="idTask" value="{$doTask['idTask'][$i]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Do wykonania</button>
+                                </form>
+                                <form method="post" action="../php/taskboard/update_task_timeline/do.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="toTimeline" value="3" type="hidden">
+                                <input name="idTask" value="{$doTask['idTask'][$i]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Testowanie</button>
+                                </form>
+                                <form method="post" action="../php/taskboard/update_task_timeline/do.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="toTimeline" value="4" type="hidden">
+                                <input name="idTask" value="{$doTask['idTask'][$i]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Ukończone</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -182,10 +211,24 @@ END;
                                 Akcja
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Do wykonania</a>
-                                <a class="dropdown-item" href="#">Wykonane</a>
-                                <a class="dropdown-item" href="#">Ukończone</a>
-                                <a class="dropdown-item" style="display: none" href="#">TEST</a>
+                               <form method="post" action="../php/taskboard/update_task_timeline/do.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="toTimeline" value="1" type="hidden">
+                                <input name="idTask" value="{$testTask['idTask'][$i]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Do wykonania</button>
+                                </form>
+                                <form method="post" action="../php/taskboard/update_task_timeline/do.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="toTimeline" value="2" type="hidden">
+                                <input name="idTask" value="{$testTask['idTask'][$i]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Wykonane</button>
+                                </form>
+                                <form method="post" action="../php/taskboard/update_task_timeline/do.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="toTimeline" value="4" type="hidden">
+                                <input name="idTask" value="{$testTask['idTask'][$i]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Ukończone</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -207,10 +250,24 @@ END;
                                 Akcja
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Do wykonania</a>
-                                <a class="dropdown-item" href="#">Wykonane</a>
-                                <a class="dropdown-item" href="#">Testowanie</a>
-                                <a class="dropdown-item" style="display: none" href="#">TEST</a>
+                                <form method="post" action="../php/taskboard/update_task_timeline/do.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="toTimeline" value="1" type="hidden">
+                                <input name="idTask" value="{$doneTask['idTask'][$i]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Do wykonania</button>
+                                </form>
+                                <form method="post" action="../php/taskboard/update_task_timeline/do.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="toTimeline" value="2" type="hidden">
+                                <input name="idTask" value="{$doneTask['idTask'][$i]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Wykonane</button>
+                                </form>
+                                <form method="post" action="../php/taskboard/update_task_timeline/do.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="toTimeline" value="3" type="hidden">
+                                <input name="idTask" value="{$doneTask['idTask'][$i]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Testowanie</button>
+                                </form>
                             </div>
                         </div>
                     </div>
