@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f6fe5f9-1897-44a2-8969-6c0f003fd5bc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/db/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/db/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/log-in/check_user_in_db.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/log-in/check_user_in_db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/projects/add_project/add_project.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/projects/add_project/add_project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/projects/add_stories/add_stories.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/projects/add_stories/add_stories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/projects/add_task/add_task.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/projects/add_task/add_task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/projects/add_user/add_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/projects/add_user/add_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/projects/my_projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/projects/my_projects.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/projects/show_project.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/projects/show_project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/projects/users_this_project.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/projects/users_this_project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/registration/check.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/registration/check.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/registration/input_values.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/registration/input_values.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/taskboard/show_stories.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/taskboard/show_stories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/taskboard/show_tasks.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/taskboard/show_tasks.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,7 +33,26 @@
     <favorites_list name="scrum-task-board" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="559">
+              <caret line="116" column="10" selection-start-line="116" selection-start-column="10" selection-end-line="116" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -73,6 +80,7 @@
       <find>nameProject</find>
       <find>description</find>
       <find>Stories</find>
+      <find>footer</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -100,7 +108,6 @@
         <option value="$PROJECT_DIR$/projects/add-user.php" />
         <option value="$PROJECT_DIR$/php/projects/add_user/do.php" />
         <option value="$PROJECT_DIR$/projects/project.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/php/projects/add_stories/alerts.php" />
         <option value="$PROJECT_DIR$/php/projects/add_stories/do.php" />
         <option value="$PROJECT_DIR$/php/projects/get_taskboard.php" />
@@ -111,7 +118,6 @@
         <option value="$PROJECT_DIR$/php/taskboard/update_task_timeline/do.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/php/taskboard/table_taskboard.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/php/session/check_logged_index.php" />
         <option value="$PROJECT_DIR$/php/projects/my_projects.php" />
         <option value="$PROJECT_DIR$/php/projects/show_project.php" />
@@ -126,6 +132,8 @@
         <option value="$PROJECT_DIR$/php/registration/input_values.php" />
         <option value="$PROJECT_DIR$/php/taskboard/show_tasks.php" />
         <option value="$PROJECT_DIR$/php/taskboard/show_stories.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -166,6 +174,11 @@
             <path>
               <item name="scrum-task-board" type="b2602c69:ProjectViewProjectNode" />
               <item name="scrum-task-board" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scrum-task-board" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scrum-task-board" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scrum-task-board" type="b2602c69:ProjectViewProjectNode" />
@@ -248,7 +261,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106683000" />
+    <option name="totallyTimeSpent" value="107251000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -261,6 +274,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4988399" visible="true" weight="0.23624596" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32946634" />
@@ -395,13 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="150" selection-start-line="150" selection-end-line="150" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projects.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
@@ -471,13 +478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -667,6 +667,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="116" column="10" selection-start-line="116" selection-start-column="10" selection-end-line="116" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
         </state>
       </provider>
     </entry>

@@ -111,8 +111,9 @@ require_once ('php/session/check_logged_index.php');
 <!-- /.container -->
 
 <!-- Footer -->
-<footer class="py-3 bg-dark">
-    <div class="container">
+
+<footer class="py-3 bg-dark" style="">
+    <div  class="container">
         <p class="m-0 text-center text-white">Scrum TaskBoard 2019</p>
     </div>
     <!-- /.container -->

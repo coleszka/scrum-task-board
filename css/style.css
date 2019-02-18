@@ -14,14 +14,11 @@ body {
 
 }
 footer {
-    position: absolute;
-    bottom: 0;
+    position: fixed;
     left: 0;
-    right: 0;
+    bottom: 0;
     width: 100%;
-
-
-
+    text-align: center;
 }
 
 .col-4{
@@ -154,3 +151,4 @@ li > img {
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
 }
+
