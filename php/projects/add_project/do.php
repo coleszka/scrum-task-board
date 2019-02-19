@@ -6,6 +6,7 @@ $nameProject = $_POST['name'];
 $description = $_POST['description'];
 
 $addProject = new AddProject();
+
 $addProject->inputNewProjectToDb($_SESSION['id'], $nameProject, $description);
 
 header("Location: ../../../projects/new-project.php");

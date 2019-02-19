@@ -27,7 +27,7 @@ class AddUser extends Db
                 }
                 catch (PDOException $e) {
                     //echo 'Caught exception: ',  $e->getMessage(), "\n";
-                    echo "Wystąpił problem z dodaniem użytkownika!";
+                    $_SESSION['errAddUser']="Wystąpił problem przy próbie dodania użytkownika!";
                 }
             }
             else {
@@ -36,7 +36,7 @@ class AddUser extends Db
         }
         catch (PDOException $e){
             //echo 'Caught exception: ',  $e->getMessage(), "\n";
-            echo "Wystąpił problem z odnalezieniem tego użytkownika!";
+            $_SESSION['errAddUser']="Wystąpił problem z przy próbie odnalezienia tego użytkownika!";
         }
     }
 

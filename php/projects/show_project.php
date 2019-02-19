@@ -25,7 +25,7 @@ class ProjectDetails extends Db
         }
         catch (PDOException $e) {
             //echo 'Caught exception: ',  $e->getMessage(), "\n";
-            echo "Wystąpił problem z wyświetleniem projektu.";
+            echo "<div style='margin-left: 168px; margin-top: 30px;' class=\"alert alert-danger\" role=\"alert\">Wystąpił problem z wyświetleniem projektu.!</div>";
         }
     }
 

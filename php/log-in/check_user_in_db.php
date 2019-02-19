@@ -32,6 +32,7 @@ class UserInDb extends Db
             }
         }
         catch (PDOException $e) {
+            //echo 'Caught exception: ',  $e->getMessage(), "\n";
             echo "Wystąpił problem ze sprawdzeniem wprowadzonych danych w bazie danych";
         }
     }
