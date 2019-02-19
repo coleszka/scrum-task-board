@@ -100,6 +100,8 @@ $detailsStories=$stories->stories();
         </form>
         <?php
         include("../php/projects/add_stories/alerts.php");
+        include("../php/projects/add_task/alerts.php");
+        include("../php/taskboard/update_task_timeline/alerts.php");
         echo "<br>";
         //include ("../php/taskboard/table_taskboard.php");
         ?>

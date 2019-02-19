@@ -12,7 +12,7 @@ class AddStories extends Db
         }
         catch (PDOException $e) {
             //echo 'Caught exception: ',  $e->getMessage(), "\n";
-            echo "Wystąpił problem z utworzeniem nowego stories INSERT1!";
+            $_SESSION['errStories']="Wystąpił problem z utworzeniem nowego stories INSERT1!";
         }
     }
 }

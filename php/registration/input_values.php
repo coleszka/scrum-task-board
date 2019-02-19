@@ -15,7 +15,8 @@ class Input extends Db
         }
         catch (PDOException $e) {
             //echo 'Caught exception: ',  $e->getMessage(), "\n";
-            echo "Wystąpił problem z rejestracją, skontaktuj się za administracją!";
+            $_SESSION['errReg'][]="Wystąpił problem z rejestracją, skontaktuj się za administracją!";
+            header("Location: ../../index.php");
         }
     }
 }

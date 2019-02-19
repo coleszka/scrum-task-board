@@ -12,7 +12,7 @@ class AddTask extends Db
         }
         catch (PDOException $e) {
             //echo 'Caught exception: ',  $e->getMessage(), "\n";
-            echo "Wystąpił problem z utworzeniem nowego zadania INSERT1!";
+            $_SESSION['errTask']="Wystąpił problem z utworzeniem nowego zadania INSERT1!";
         }
     }
 }

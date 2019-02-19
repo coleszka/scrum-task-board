@@ -1,6 +1,6 @@
 <?php
 if (isset($_SESSION['errTask'])) {
-    echo "<div style='font-size: 12px;' class=\"alert alert-danger\" role=\"alert\">".$_SESSION['errTask']."</div>";
+    echo "<div class=\"alert alert-danger\" role=\"alert\">".$_SESSION['errTask']."</div>";
     unset($_SESSION['errTask']);
 }
 elseif (isset($_SESSION['succTask'])) {
