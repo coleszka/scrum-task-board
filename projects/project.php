@@ -78,16 +78,20 @@ $table=new UsersThisProject($_GET['id']);
         <?php
             if ($project->existProject()==true) {
                 echo "<h3>".$details['name']."</h3><h5>".$details['description']."</h5><hr>";
-            }
+                echo <<<END
+        <h5>Zespół</h5>
+        <a class="btn btn-info" href="task-board.php?project={$_GET['id']}" role="button">+ Otwórz TaskBoard</a>
+        <a class="btn btn-success" href="add-user.php?project={$_GET['id']}" role="button">+ Dodaj członka</a>
+        <br><br>
+END;
+                $table->showMembers();
+
+        }
             else {
+                include("../php/projects/add_stories/alerts.php");
                 echo "<div class=\"alert alert-danger\" role=\"alert\">Nie masz dostępu do tego projektu!</div>";
             }
         ?>
-        <h5>Zespół</h5>
-        <a class="btn btn-info" href="task-board.php?project=<?php echo $_GET['id']?>" role="button">+ Otwórz TaskBoard</a>
-        <a class="btn btn-success" href="add-user.php?project=<?php echo $_GET['id']?>" role="button">+ Dodaj członka</a>
-        <br><br>
-        <?php $table->showMembers();?>
     </div>
 
 

@@ -1,9 +1,7 @@
 <?php
 require_once ('../php/session/check_log_in.php');
 require_once('../vendor/autoload.php');
-
-
-
+$project = new ProjectDetails($_GET['project']);
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -72,20 +70,28 @@ require_once('../vendor/autoload.php');
 <div class="container">
 
     <div class="user-content">
+        <?php
+        if ($project->existProject()==true) {
+            echo <<<END
         <h3>Dodaj członka</h3>
         <hr>
         <form method="get" action="../php/projects/add_user/do.php">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Nazwa użytkownika</label>
                 <input name="name" class="form-control" id="exampleFormControlInput1" placeholder="">
-                <input name="project" value="<?php echo $_GET['project']?>" type="hidden">
+                <input name="project" value="{$_GET['project']}" type="hidden">
             </div>
             <button type="submit" class="btn btn-primary">Dodaj</button>
         </form>
         <br>
-        <?php
+END;
         include("../php/projects/add_user/alerts.php");
+        }
+        else {
+            echo "<div class=\"alert alert-danger\" role=\"alert\">Nie masz dostępu do tego projektu!</div>";
+        }
         ?>
+
     </div>
 
 

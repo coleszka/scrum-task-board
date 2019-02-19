@@ -82,23 +82,22 @@ $detailsStories=$stories->stories();
         <?php
         if ($project->existProject()==true) {
             echo "<h3>".$detailsProject['name']."</h3><h5>".$detailsProject['description']."</h5><hr>";
-        }
-        else {
-            echo "<div class=\"alert alert-danger\" role=\"alert\">Nie masz dostępu do tego projektu!</div>";
-        }
-        ?>
+            echo <<<END
         <form method="POST" action="../php/projects/add_stories/do.php">
             <div style="max-width: 800px;" class="input-group">
-
                 <input style="margin-right: 1px; max-width: 30%; border-right: none" name="nameStories" class="form-control" id="exampleFormControlInput1" placeholder="Nazwa stories">
                 <input style="margin-right: 1px;" name="descStories" class="form-control" id="exampleFormControlInput1" placeholder="Opis stories">
-                <input name="project" value="<?php echo $_GET['project']?>" type="hidden">
+                <input name="project" value="{$_GET['project']}" type="hidden">
                 <span class="input-group-btn" style="">
                     <button type="submit" class="btn btn-success">+</button>
                 </span>
             </div>
         </form>
-        <?php
+END;
+        }
+        else {
+            echo "<div class=\"alert alert-danger\" role=\"alert\">Nie masz dostępu do tego projektu!</div>";
+        }
         include("../php/projects/add_stories/alerts.php");
         include("../php/projects/add_task/alerts.php");
         include("../php/taskboard/update_task_timeline/alerts.php");
