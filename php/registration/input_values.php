@@ -6,8 +6,8 @@ class Input extends Db
         try {
             $pass = md5($pass);
             $result = $this->connect()->prepare("INSERT INTO users (id, login, password, email)
-            VALUES (NULL, '$nick', '$pass', '$email')");
-            $result->execute();
+            VALUES (NULL, :nick, :pass, :email)");
+            $result->execute(array('nick' => $nick, 'pass' => $pass, 'email' => $email));
             //echo "Rejestracja przebiegła pomyślnie! Możesz się teraz zalogować!<br>";
             //echo "<a href='../../index.php'>Zaloguj się!</a>";
             $_SESSION['succ']="Rejestracja przebiegła pomyślnie! Możesz się teraz zalogować!";

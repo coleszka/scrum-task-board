@@ -6,8 +6,8 @@ class AddStories extends Db
 
         try {
             $result = $this->connect()->prepare("INSERT INTO stories (id, id_project, name_stories, description) 
-            VALUES (NULL, '{$idProject}', '{$nameStories}', '{$descStories}')");
-            $result->execute();
+            VALUES (NULL, :idProject, :nameStories, :descStories)");
+            $result->execute(array('idProject' => $idProject, 'nameStories' => $nameStories, 'descStories' => $descStories));
             $_SESSION['succStories']="Utworzono nowe stories o nazwie: ".$nameStories."!";
         }
         catch (PDOException $e) {

@@ -5,8 +5,8 @@ class MyProjects extends Db
 
     public function showMyProjects() {
         try {
-            $result = $this->connect()->prepare("SELECT * FROM projects WHERE id_user='{$_SESSION['id']}'");
-            $result->execute();
+            $result = $this->connect()->prepare("SELECT * FROM projects WHERE id_user = :idUserSession");
+            $result->execute(array('idUserSession' => $_SESSION['id']));
             $row = $result->rowCount();
 
             if ($row > 0) {

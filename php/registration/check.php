@@ -36,8 +36,8 @@ class Register extends Db
             $err[]="Aby dokonać rejestracji należy zaznaczyć przeczytanie regulaminu";
         }
         try {
-            $result = $this->connect()->prepare("SELECT * FROM users WHERE login='{$this->login}'");
-            $result->execute();
+            $result = $this->connect()->prepare("SELECT * FROM users WHERE login = :login");
+            $result->execute(array('login' => $this->login));
 
             $row = $result->rowCount();
 
@@ -50,8 +50,8 @@ class Register extends Db
             echo "Wystąpił problem 1";
         }
         try {
-            $result = $this->connect()->prepare("SELECT * FROM users WHERE email='{$this->email}'");
-            $result->execute();
+            $result = $this->connect()->prepare("SELECT * FROM users WHERE email = :email");
+            $result->execute(array('email' => $this->email));
 
             $row = $result->rowCount();
 

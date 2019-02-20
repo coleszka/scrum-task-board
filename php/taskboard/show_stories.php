@@ -12,8 +12,8 @@ class ShowStories extends Db
     public function __construct(int $getIdProject) {
         try {
             $this->idProject=$getIdProject;
-            $result = $this->connect()->prepare("SELECT * FROM stories WHERE id_project='{$this->idProject}'");
-            $result->execute();
+            $result = $this->connect()->prepare("SELECT * FROM stories WHERE id_project = :idProject");
+            $result->execute(array('idProject' => $this->idProject));
             $this->rows = $result->rowCount();
 
             if ($this->rows > 0) {

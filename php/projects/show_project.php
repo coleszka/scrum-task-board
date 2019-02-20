@@ -10,8 +10,8 @@ class ProjectDetails extends Db
 
     public function __construct(int $getId) {
         try {
-            $result = $this->connect()->prepare("SELECT * FROM projects WHERE id='{$getId}'");
-            $result->execute();
+            $result = $this->connect()->prepare("SELECT * FROM projects WHERE id = :getId");
+            $result->execute(array('getId' => $getId));
             $this->rows = $result->rowCount();
 
             if ($this->rows > 0) {

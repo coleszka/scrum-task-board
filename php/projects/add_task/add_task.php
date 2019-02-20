@@ -6,8 +6,8 @@ class AddTask extends Db
 
         try {
             $result = $this->connect()->prepare("INSERT INTO task (id, id_stories, timeline, description) 
-            VALUES (NULL, '{$idStories}', '1', '{$descTask}')");
-            $result->execute();
+            VALUES (NULL, :idStories, '1', :descTask)");
+            $result->execute(array('idStories' => $idStories, 'descTask' => $descTask));
             $_SESSION['succTask']="Utworzono nowe zadanie: ".$descTask."!";
         }
         catch (PDOException $e) {

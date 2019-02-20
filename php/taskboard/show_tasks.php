@@ -12,9 +12,9 @@ class ShowTasks extends Db
         try {
             $this->idStories=$getIdStories;
             $this->timelineTask=$getTimeline;
-            $result = $this->connect()->prepare("SELECT * FROM task WHERE id_stories='{$this->idStories}'
-            AND timeline='{$this->timelineTask}'");
-            $result->execute();
+            $result = $this->connect()->prepare("SELECT * FROM task WHERE id_stories = :idStories
+            AND timeline = :timeline");
+            $result->execute(array('idStories' => $this->idStories, 'timeline' => $this->timelineTask));
             $this->rows = $result->rowCount();
 
             if ($this->rows > 0) {

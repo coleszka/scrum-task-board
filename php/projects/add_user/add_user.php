@@ -14,15 +14,15 @@ class AddUser extends Db
 
     public function addUserToProject() {
         try {
-            $result = $this->connect()->prepare("SELECT id, login FROM users WHERE login='{$this->getUserName}'
-            AND NOT id='{$this->userIdAdding}'");
-            $result->execute();
+            $result = $this->connect()->prepare("SELECT id, login FROM users WHERE login = :login
+            AND NOT id = :userIdAdding");
+            $result->execute(array('login' => $this->getUserName, 'userIdAdding' => $this->userIdAdding));
             if ($result->rowCount() > 0) {
                 $row=$result->fetch(PDO::FETCH_ASSOC);
                 try {
                     $result = $this->connect()->prepare("INSERT INTO users_projects(id, id_project, id_user, perm)
-                VALUES (NULL, '{$this->getIdProject}', '{$row['id']}', '')");
-                    $result->execute();
+                VALUES (NULL, :getIdProject, :rowIdSession, '')");
+                    $result->execute(array('getIdProject' => $this->getIdProject, 'rowIdSession' => $row['id']));
                     $_SESSION['succAddUser']="Pomyślnie dodano nowego członka projektu o nazwie: ".$this->getUserName."!";
                 }
                 catch (PDOException $e) {

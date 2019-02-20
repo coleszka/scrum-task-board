@@ -11,8 +11,8 @@ class UsersThisProject extends Db
     public function showMembers() {
         try {
             $result = $this->connect()->prepare("SELECT users.login FROM users INNER JOIN users_projects
-            ON users.id = users_projects.id_user WHERE users_projects.id_project='{$this->idProject}'");
-            $result->execute();
+            ON users.id = users_projects.id_user WHERE users_projects.id_project = :idProject");
+            $result->execute(array('idProject' => $this->idProject));
             $row = $result->rowCount();
             if ($row > 0) {
                 $i=1;
