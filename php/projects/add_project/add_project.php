@@ -17,7 +17,7 @@ class AddProject extends Db
                 }
                 catch (PDOException $e) {
                     //echo 'Caught exception: ',  $e->getMessage(), "\n";
-                    $_SESSION['errProject']="Wystąpił problem z utworzeniem nowego projektu SELECT!";
+                    $_SESSION['err']="Wystąpił problem z utworzeniem nowego projektu SELECT!";
                 }
                 $result = $this->connect()->prepare("INSERT INTO users_projects(id, id_project, id_user, perm)
                 VALUES (NULL, :lastId, :idUser, '')");
@@ -25,14 +25,14 @@ class AddProject extends Db
             }
             catch (PDOException $e) {
                 //echo 'Caught exception: ',  $e->getMessage(), "\n";
-                $_SESSION['errProject']="Wystąpił problem z utworzeniem nowego projektu INSERT2!";
+                $_SESSION['err']="Wystąpił problem z utworzeniem nowego projektu INSERT2!";
             }
 
-            $_SESSION['succProject']="Utworzono nowy projekt o nazwie: ".$nameProject."!";
+            $_SESSION['succ']="Utworzono nowy projekt o nazwie: ".$nameProject."!";
         }
         catch (PDOException $e) {
             //echo 'Caught exception: ',  $e->getMessage(), "\n";
-            $_SESSION['errProject']="Wystąpił problem z utworzeniem nowego projektu INSERT1!";
+            $_SESSION['err']="Wystąpił problem z utworzeniem nowego projektu INSERT1!";
         }
     }
 }

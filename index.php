@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once ('php/session/check_logged_index.php');
+require_once ("php/statement/statement.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,9 +68,7 @@ require_once ('php/session/check_logged_index.php');
                 <button type="submit" class="btn btn-primary">Zaloguj</button>
             </form>
             <br>
-            <?php
-            include ("php/log-in/alerts.php");
-            ?>
+            <?php checkStatement(12,12); ?>
         </div>
         <div class="col-4">
             <h4>Zarejestruj się</h4>

@@ -27,7 +27,7 @@ class UserInDb extends Db
                 header("Location: ../../user-menu.php");
                 //echo $_SESSION['id']." ".$_SESSION['login'];
             } else {
-                $_SESSION['errLog'] = "Login lub hasło są niepoprawne! Spróbuj jeszcze raz.";
+                $_SESSION['err'] = "Login lub hasło są niepoprawne! Spróbuj jeszcze raz.";
                 header("Location: ../../index.php");
             }
         }

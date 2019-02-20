@@ -1,5 +1,7 @@
 <?php
 require_once ('../php/session/check_log_in.php');
+require_once('../vendor/autoload.php');
+use function checkStatement\checkStatement;
 
 ?>
 <!DOCTYPE html>
@@ -83,9 +85,7 @@ require_once ('../php/session/check_log_in.php');
             <button type="submit" class="btn btn-primary">Dodaj</button>
         </form>
         <br>
-        <?php
-        include("../php/projects/add_project/alerts.php");
-        ?>
+        <?php checkStatement(12,12); ?>
 
     </div>
 

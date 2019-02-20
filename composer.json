@@ -10,7 +10,11 @@
       "php/projects/add_stories",
       "php/taskboard",
       "php/taskboard/update_task_timeline",
-      "php/projects/add_task"
+      "php/projects/add_task",
+      "php/statement"
+    ],
+    "files": [
+      "php/statement/statement.php"
     ]
   }
 }

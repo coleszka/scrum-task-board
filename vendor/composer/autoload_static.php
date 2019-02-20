@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInita96c6dbc01e1938c115addac96809d55
 {
+    public static $files = array (
+        '35cae0b9642cff34b77db51076299f76' => __DIR__ . '/../..' . '/php/statement/statement.php',
+    );
+
     public static $classMap = array (
         'AddProject' => __DIR__ . '/../..' . '/php/projects/add_project/add_project.php',
         'AddStories' => __DIR__ . '/../..' . '/php/projects/add_stories/add_stories.php',
