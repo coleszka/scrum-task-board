@@ -78,6 +78,7 @@ $myProjects = new MyProjects();
         <br><br>
         <?php
             $myProjects->showMyProjects();
+            require_once ("php/projects/delete_project/alerts.php");
         ?>
     </div>
 

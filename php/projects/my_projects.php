@@ -29,7 +29,7 @@ class MyProjects extends Db
                             <td>".$row['description']."</td>
                             <td><a class=\"btn btn-success\" href=\"projects/project.php?id=".$row['id']."\" role=\"button\">Otwórz</a></td>
                             <td><a class=\"btn btn-secondary\" href=\"projects/edit-project.php?id=".$row['id']."\" role=\"button\">Edytuj</a></td>
-                            <td><a class=\"btn btn-danger\" href=\"projects/project.php?id=".$row['id']."\" role=\"button\">Usuń</a></td>
+                            <td><a class=\"btn btn-danger\" href=\"php/projects/delete_project/do.php?id=".$row['id']."\" role=\"button\">Usuń</a></td>
                         </tr>";
 
                 }
