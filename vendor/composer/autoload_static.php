@@ -16,6 +16,7 @@ class ComposerStaticInita96c6dbc01e1938c115addac96809d55
         'AddTask' => __DIR__ . '/../..' . '/php/projects/add_task/add_task.php',
         'AddUser' => __DIR__ . '/../..' . '/php/projects/add_user/add_user.php',
         'Db' => __DIR__ . '/../..' . '/php/db/db.php',
+        'EditProject' => __DIR__ . '/../..' . '/php/projects/edit_project/edit_project.php',
         'Input' => __DIR__ . '/../..' . '/php/registration/input_values.php',
         'MyProjects' => __DIR__ . '/../..' . '/php/projects/my_projects.php',
         'ProjectDetails' => __DIR__ . '/../..' . '/php/projects/show_project.php',

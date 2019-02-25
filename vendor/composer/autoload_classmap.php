@@ -11,6 +11,7 @@ return array(
     'AddTask' => $baseDir . '/php/projects/add_task/add_task.php',
     'AddUser' => $baseDir . '/php/projects/add_user/add_user.php',
     'Db' => $baseDir . '/php/db/db.php',
+    'EditProject' => $baseDir . '/php/projects/edit_project/edit_project.php',
     'Input' => $baseDir . '/php/registration/input_values.php',
     'MyProjects' => $baseDir . '/php/projects/my_projects.php',
     'ProjectDetails' => $baseDir . '/php/projects/show_project.php',

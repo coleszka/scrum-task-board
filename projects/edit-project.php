@@ -3,6 +3,9 @@ require_once ('../php/session/check_log_in.php');
 require_once('../vendor/autoload.php');
 require_once ("../php/statement/statement.php");
 
+$project = new ProjectDetails($_GET['id']);
+$details = $project->details();
+
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -71,23 +74,25 @@ require_once ("../php/statement/statement.php");
 <div class="container">
 
     <div class="user-content">
-        <h3>Nowy projekt</h3>
+        <h3><?php echo "Edycja: ".$details['name']?></h3>
         <hr>
-        <form method="post" action="../php/projects/add_project/do.php">
+        <form method="post" action="../php/projects/edit_project/do.php">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Nazwa</label>
-                <input name="name" class="form-control" id="exampleFormControlInput1" placeholder="">
+                <input name="name" class="form-control" id="exampleFormControlInput1" placeholder="" value="<?php echo $details['name']?>">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Opis</label>
-                <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"><?php echo $details['description']?></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Dodaj</button>
+            <input name="idProject" value="<?php echo $_GET['id']?>" type="hidden">
+            <button type="submit" class="btn btn-primary">Zapisz</button>
         </form>
         <br>
-        <?php checkStatement(12,12); ?>
-
+        <?php require_once ("../php/projects/edit_project/alerts.php") ?>
     </div>
+
+
 
 
     <div id="wrapper">
