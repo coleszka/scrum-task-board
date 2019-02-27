@@ -12,6 +12,7 @@ return array(
     'AddUser' => $baseDir . '/php/projects/add_user/add_user.php',
     'Db' => $baseDir . '/php/db/db.php',
     'DeleteProject' => $baseDir . '/php/projects/delete_project/delete.php',
+    'DeleteUserFromProject' => $baseDir . '/php/projects/delete_user_from_project/delete.php',
     'EditProject' => $baseDir . '/php/projects/edit_project/edit_project.php',
     'Input' => $baseDir . '/php/registration/input_values.php',
     'MyProjects' => $baseDir . '/php/projects/my_projects.php',
@@ -21,5 +22,6 @@ return array(
     'ShowTasks' => $baseDir . '/php/taskboard/show_tasks.php',
     'UpdateTimeline' => $baseDir . '/php/taskboard/update_task_timeline/update_timeline.php',
     'UserInDb' => $baseDir . '/php/log-in/check_user_in_db.php',
+    'UserProjectDetails' => $baseDir . '/php/projects/show_user_project.php',
     'UsersThisProject' => $baseDir . '/php/projects/users_this_project.php',
 );

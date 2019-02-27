@@ -17,6 +17,7 @@ class ComposerStaticInita96c6dbc01e1938c115addac96809d55
         'AddUser' => __DIR__ . '/../..' . '/php/projects/add_user/add_user.php',
         'Db' => __DIR__ . '/../..' . '/php/db/db.php',
         'DeleteProject' => __DIR__ . '/../..' . '/php/projects/delete_project/delete.php',
+        'DeleteUserFromProject' => __DIR__ . '/../..' . '/php/projects/delete_user_from_project/delete.php',
         'EditProject' => __DIR__ . '/../..' . '/php/projects/edit_project/edit_project.php',
         'Input' => __DIR__ . '/../..' . '/php/registration/input_values.php',
         'MyProjects' => __DIR__ . '/../..' . '/php/projects/my_projects.php',
@@ -26,6 +27,7 @@ class ComposerStaticInita96c6dbc01e1938c115addac96809d55
         'ShowTasks' => __DIR__ . '/../..' . '/php/taskboard/show_tasks.php',
         'UpdateTimeline' => __DIR__ . '/../..' . '/php/taskboard/update_task_timeline/update_timeline.php',
         'UserInDb' => __DIR__ . '/../..' . '/php/log-in/check_user_in_db.php',
+        'UserProjectDetails' => __DIR__ . '/../..' . '/php/projects/show_user_project.php',
         'UsersThisProject' => __DIR__ . '/../..' . '/php/projects/users_this_project.php',
     );
 

@@ -10,6 +10,7 @@
       "php/projects/add_stories",
       "php/projects/edit_project",
       "php/projects/delete_project",
+      "php/projects/delete_user_from_project",
       "php/taskboard",
       "php/taskboard/update_task_timeline",
       "php/projects/add_task",

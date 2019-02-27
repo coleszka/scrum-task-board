@@ -91,6 +91,7 @@ END;
                 include("../php/projects/add_stories/alerts.php");
                 echo "<div class=\"alert alert-danger\" role=\"alert\">Nie masz dostępu do tego projektu!</div>";
             }
+            include("../php/projects/delete_user_from_project/alerts.php");
         ?>
     </div>
 
