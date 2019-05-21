@@ -71,6 +71,7 @@ $myProjects = new MyProjects();
 <div class="container">
 
     <div class="user-content">
+
         <h3>Projekty</h3>
         <hr>
 

@@ -81,6 +81,7 @@ $detailsStories=$stories->stories();
 
         <?php
         if ($project->existProject()==true) {
+            echo '<a href="'.$_SERVER['HTTP_REFERER'].'">Poprzednia strona</a>';
             echo "<h3>".$detailsProject['name']."</h3><h5>".$detailsProject['description']."</h5><hr>";
             echo <<<END
         <form method="POST" action="../php/projects/add_stories/do.php">

@@ -76,6 +76,7 @@ $table=new UsersThisProject($_GET['id'], $_SESSION['id']);
 
     <div class="user-content">
         <?php
+            echo '<a href="'."../projects.php".'">Poprzednia strona</a>';
             if ($project->existProject()==true) {
                 echo "<h3>".$details['name']."</h3><h5>".$details['description']."</h5><hr>";
                 echo <<<END

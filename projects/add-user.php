@@ -71,6 +71,7 @@ $project = new ProjectDetails($_GET['project']);
 
     <div class="user-content">
         <?php
+        echo '<a href="'."project.php?id=".$_GET['project'].'">Poprzednia strona</a>';
         if ($project->existProject()==true) {
             echo <<<END
         <h3>Dodaj członka</h3>

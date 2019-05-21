@@ -71,6 +71,7 @@ require_once ("../php/statement/statement.php");
 <div class="container">
 
     <div class="user-content">
+        <?php echo '<a href="'."../projects.php".'">Poprzednia strona</a>';  ?>
         <h3>Nowy projekt</h3>
         <hr>
         <form method="post" action="../php/projects/add_project/do.php">

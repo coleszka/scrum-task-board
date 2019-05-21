@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f6fe5f9-1897-44a2-8969-6c0f003fd5bc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/php/taskboard/update_task_timeline/delete_task.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/taskboard/table_taskboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/taskboard/table_taskboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/taskboard/update_task_timeline/alerts.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/taskboard/update_task_timeline/alerts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/taskboard/update_task_timeline/update_timeline.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/taskboard/update_task_timeline/update_timeline.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/add-user.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/add-user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/new-project.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/new-project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/project.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/task-board.php" beforeDir="false" afterPath="$PROJECT_DIR$/projects/task-board.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,58 +40,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projects/task-board.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="126" column="51" lean-forward="true" selection-start-line="126" selection-start-column="51" selection-end-line="126" selection-end-column="51" />
+            <state relative-caret-position="493">
+              <caret line="83" column="80" selection-start-line="83" selection-start-column="80" selection-end-line="83" selection-end-column="80" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/taskboard/table_taskboard.php">
+        <entry file="file://$PROJECT_DIR$/projects/project.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="145" column="109" selection-start-line="145" selection-start-column="109" selection-end-line="145" selection-end-column="109" />
+            <state relative-caret-position="459">
+              <caret line="78" column="73" selection-start-line="78" selection-start-column="73" selection-end-line="78" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/taskboard/update_task_timeline/delete_task.php">
+        <entry file="file://$PROJECT_DIR$/projects/new-project.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/taskboard/update_task_timeline/do.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-end-line="13" selection-end-column="2" />
+            <state relative-caret-position="190">
+              <caret line="73" column="79" selection-start-line="73" selection-start-column="79" selection-end-line="73" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/php/taskboard/update_task_timeline/update_timeline.php">
+        <entry file="file://$PROJECT_DIR$/projects/add-user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/taskboard/update_task_timeline/alerts.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="476">
+              <caret line="73" column="59" selection-start-line="73" selection-start-column="59" selection-end-line="73" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -162,17 +145,13 @@
         <option value="$PROJECT_DIR$/php/projects/add_project/add_project.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/a" />
-        <option value="$PROJECT_DIR$/projects/task-board.php" />
-        <option value="$PROJECT_DIR$/projects/add-user.php" />
         <option value="$PROJECT_DIR$/php/statement/statement.php" />
-        <option value="$PROJECT_DIR$/projects/new-project.php" />
         <option value="$PROJECT_DIR$/php/projects/edit_project/do.php" />
         <option value="$PROJECT_DIR$/php/projects/edit_project/alerts.php" />
         <option value="$PROJECT_DIR$/php/projects/edit_project/edit_project.php" />
         <option value="$PROJECT_DIR$/projects/edit-project.php" />
         <option value="$PROJECT_DIR$/php/projects/delete_project/do.php" />
         <option value="$PROJECT_DIR$/php/projects/my_projects.php" />
-        <option value="$PROJECT_DIR$/projects.php" />
         <option value="$PROJECT_DIR$/php/projects/delete_project/delete.php" />
         <option value="$PROJECT_DIR$/php/projects/delete_user_from_project/do.php" />
         <option value="$PROJECT_DIR$/composer.json" />
@@ -180,12 +159,16 @@
         <option value="$PROJECT_DIR$/php/projects/show_user_project.php" />
         <option value="$PROJECT_DIR$/projects/edit-project-user.php" />
         <option value="$PROJECT_DIR$/php/db/db.php" />
-        <option value="$PROJECT_DIR$/projects/project.php" />
         <option value="$PROJECT_DIR$/php/projects/users_this_project.php" />
         <option value="$PROJECT_DIR$/php/taskboard/table_taskboard.php" />
         <option value="$PROJECT_DIR$/php/taskboard/update_task_timeline/delete_task.php" />
         <option value="$PROJECT_DIR$/php/taskboard/update_task_timeline/alerts.php" />
         <option value="$PROJECT_DIR$/php/taskboard/update_task_timeline/update_timeline.php" />
+        <option value="$PROJECT_DIR$/projects/task-board.php" />
+        <option value="$PROJECT_DIR$/projects.php" />
+        <option value="$PROJECT_DIR$/projects/project.php" />
+        <option value="$PROJECT_DIR$/projects/new-project.php" />
+        <option value="$PROJECT_DIR$/projects/add-user.php" />
       </list>
     </option>
   </component>
@@ -347,12 +330,12 @@
       <workItem from="1554655813774" duration="16000" />
       <workItem from="1554986055300" duration="386000" />
       <workItem from="1558434161005" duration="22000" />
-      <workItem from="1558434200293" duration="2961000" />
+      <workItem from="1558434200293" duration="3729000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137946000" />
+    <option name="totallyTimeSpent" value="138714000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -580,20 +563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/add-user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="49" lean-forward="true" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/new-project.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/projects/edit_project/alerts.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -643,13 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="80" column="65" selection-start-line="80" selection-start-column="65" selection-end-line="80" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -744,20 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/project.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="59" column="53" lean-forward="true" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/task-board.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="126" column="51" lean-forward="true" selection-start-line="126" selection-start-column="51" selection-end-line="126" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/taskboard/show_tasks.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -769,13 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" lean-forward="true" selection-end-line="13" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/taskboard/table_taskboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="145" column="109" selection-start-line="145" selection-start-column="109" selection-end-line="145" selection-end-column="109" />
         </state>
       </provider>
     </entry>
@@ -802,6 +743,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/taskboard/table_taskboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2465">
+          <caret line="145" column="109" selection-start-line="145" selection-start-column="109" selection-end-line="145" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/task-board.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="83" column="80" selection-start-line="83" selection-start-column="80" selection-end-line="83" selection-end-column="80" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/project.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="78" column="73" selection-start-line="78" selection-start-column="73" selection-end-line="78" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/new-project.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="73" column="79" selection-start-line="73" selection-start-column="79" selection-end-line="73" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/add-user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="73" column="59" selection-start-line="73" selection-start-column="59" selection-end-line="73" selection-end-column="59" />
         </state>
       </provider>
     </entry>
