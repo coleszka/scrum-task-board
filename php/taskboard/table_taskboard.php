@@ -110,6 +110,18 @@ echo '</div><div class="w-100"></div>'*/
                                 <div class="card-header">{$detailsStories['nameStories'][$j]}</div>
                                 <div class="card-body">
                                     <p class="card-text">{$detailsStories['descStories'][$j]}</p>
+                                    <div class="btn-group">
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Akcja
+                            </button>
+                            <div class="dropdown-menu">
+                                <form method="post" action="../php/taskboard/update_task_timeline/delete_stories.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="idStories" value="{$detailsStories['idStories'][$j]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Usuń</button>
+                                </form>
+                            </div>
+                        </div>
                                 </div>
                             </div>
                         </div><div id="2-col" class="col">

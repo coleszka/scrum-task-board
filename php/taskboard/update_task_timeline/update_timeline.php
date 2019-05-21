@@ -27,6 +27,20 @@ class UpdateTimeline extends Db
             $_SESSION['errTask']="Wystąpił problem z DELETE TASK!";
         }
     }
+
+    public function deleteStories(int $idStories) {
+
+        try {
+            $result = $this->connect()->prepare("DELETE stories, task FROM stories INNER JOIN task
+            WHERE stories.id = task.id_stories AND stories.id = :idStories");
+            $result->execute(array('idStories' => $idStories));
+            $_SESSION['succDeleteStories']="Usunięto stories!";
+        }
+        catch (PDOException $e) {
+            echo 'Caught exception: ',  $e->getMessage(), "\n";
+            $_SESSION['errTask']="Wystąpił problem z DELETE Stories!";
+        }
+    }
 }
 
 ?>
