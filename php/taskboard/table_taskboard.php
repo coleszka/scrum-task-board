@@ -2,13 +2,16 @@
 
 $tabela[3]='<a class="dropdown-item" href="#">Do wykonania</a>
             <a class="dropdown-item" href="#">Testowanie</a>
-            <a class="dropdown-item" href="#">Ukończone</a>';
+            <a class="dropdown-item" href="#">Ukończone</a>
+            <a class="dropdown-item" href="#">Usuń</a>';
 $tabela[4]='<a class="dropdown-item" href="#">Do wykonania</a>
             <a class="dropdown-item" href="#">Wykonane</a>
-            <a class="dropdown-item" href="#">Ukończone</a>';
+            <a class="dropdown-item" href="#">Ukończone</a>
+            <a class="dropdown-item" href="#">Usuń</a>';
 $tabela[5]='<a class="dropdown-item" href="#">Do wykonania</a>
             <a class="dropdown-item" href="#">Wykonane</a>
-            <a class="dropdown-item" href="#">Testowanie</a>';
+            <a class="dropdown-item" href="#">Testowanie</a>
+            <a class="dropdown-item" href="#">Usuń</a>';
 
 /*echo '<div class="row" style="padding: 50px; padding-top: 10px;">';
 for ($i=1;$i<6;$i++) {
@@ -139,6 +142,11 @@ END;
                                 <input name="toTimeline" value="4" type="hidden">
                                 <input name="idTask" value="{$toDoTask['idTask'][$i]}" type="hidden">
                                 <button class="dropdown-item" type="submit">Ukończone</button>
+                                </form>
+                                <form method="post" action="../php/taskboard/update_task_timeline/delete_task.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="idTask" value="{$toDoTask['idTask'][$i]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Usuń</button>
                                 </form>
                             </div>
                         </div>
