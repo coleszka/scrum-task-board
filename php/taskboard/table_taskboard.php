@@ -198,6 +198,11 @@ END;
                                 <input name="idTask" value="{$doTask['idTask'][$i]}" type="hidden">
                                 <button class="dropdown-item" type="submit">Ukończone</button>
                                 </form>
+                                <form method="post" action="../php/taskboard/update_task_timeline/delete_task.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="idTask" value="{$doTask['idTask'][$i]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Usuń</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -237,6 +242,11 @@ END;
                                 <input name="idTask" value="{$testTask['idTask'][$i]}" type="hidden">
                                 <button class="dropdown-item" type="submit">Ukończone</button>
                                 </form>
+                                <form method="post" action="../php/taskboard/update_task_timeline/delete_task.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="idTask" value="{$testTask['idTask'][$i]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Usuń</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -275,6 +285,11 @@ END;
                                 <input name="toTimeline" value="3" type="hidden">
                                 <input name="idTask" value="{$doneTask['idTask'][$i]}" type="hidden">
                                 <button class="dropdown-item" type="submit">Testowanie</button>
+                                </form>
+                                <form method="post" action="../php/taskboard/update_task_timeline/delete_task.php">
+                                <input name="project" value="{$_GET['project']}" type="hidden">
+                                <input name="idTask" value="{$doneTask['idTask'][$i]}" type="hidden">
+                                <button class="dropdown-item" type="submit">Usuń</button>
                                 </form>
                             </div>
                         </div>
