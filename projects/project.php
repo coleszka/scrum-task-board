@@ -5,7 +5,7 @@ require_once('../vendor/autoload.php');
 $project = new ProjectDetails($_GET['id']);
 $details=$project->details();
 
-$table=new UsersThisProject($_GET['id']);
+$table=new UsersThisProject($_GET['id'], $_SESSION['id']);
 
 ?>
 <!DOCTYPE html>

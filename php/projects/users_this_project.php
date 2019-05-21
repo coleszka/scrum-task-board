@@ -5,15 +5,17 @@ class UsersThisProject extends Db
     private $idProject;
     private $idUser;
 
-    public function __construct($idProject) {
+    public function __construct($idProject, $idUser) {
         $this->idProject=$idProject;
+        $this->idUser=$idUser;
     }
 
     public function showMembers() {
         try {
             $result = $this->connect()->prepare("SELECT users.login, users.id FROM users INNER JOIN users_projects
-            ON users.id = users_projects.id_user WHERE users_projects.id_project = :idProject");
-            $result->execute(array('idProject' => $this->idProject));
+            ON users.id = users_projects.id_user WHERE users_projects.id_project = :idProject
+                                                   AND users.id NOT IN (:idProjectHead)");
+            $result->execute(array('idProject' => $this->idProject, 'idProjectHead' => $this->idUser));
             $row = $result->rowCount();
             if ($row > 0) {
                 $i=1;
