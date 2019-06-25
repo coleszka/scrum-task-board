@@ -10,6 +10,7 @@ return array(
     'AddStories' => $baseDir . '/php/projects/add_stories/add_stories.php',
     'AddTask' => $baseDir . '/php/projects/add_task/add_task.php',
     'AddUser' => $baseDir . '/php/projects/add_user/add_user.php',
+    'CheckByIdUser' => $baseDir . '/php/check/check_by_id_user.php',
     'Db' => $baseDir . '/php/db/db.php',
     'DeleteProject' => $baseDir . '/php/projects/delete_project/delete.php',
     'DeleteUserFromProject' => $baseDir . '/php/projects/delete_user_from_project/delete.php',

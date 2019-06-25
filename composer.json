@@ -14,7 +14,8 @@
       "php/taskboard",
       "php/taskboard/update_task_timeline",
       "php/projects/add_task",
-      "php/statement"
+      "php/statement",
+      "php/check"
     ],
     "files": [
       "php/statement/statement.php"

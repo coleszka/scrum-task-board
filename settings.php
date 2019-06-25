@@ -1,5 +1,9 @@
 <?php
 require_once ('php/session/check_log_in.php');
+require_once ('vendor/autoload.php');
+
+$check = new CheckByIdUser($_SESSION['id']);
+$data = $check->checkUserData();
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -51,6 +55,7 @@ require_once ('php/session/check_log_in.php');
                     <div style="margin-left: 3px;" class="btn-group">
                         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <?php echo $_SESSION['login']; ?>
+
                         </button>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="#">Action</a>
@@ -68,7 +73,32 @@ require_once ('php/session/check_log_in.php');
 <div class="container">
 
     <div class="user-content">
-        <h5>Wybierz pozycję z menu po lewej stronie. </h5>
+        <h3>Ustawienia</h3>
+        <hr>
+        <form method="post" action="../php/projects/edit_project/do.php">
+            <div class="form-group">
+                <label for="formGroupExampleInput">Nazwa użytkownika</label>
+                <input type="text" dirname="asda" class="form-control" id="formGroupExampleInput" value="<?php echo $_SESSION['login']; ?>">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput">Adres e-mail</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" value="<?php echo $data[0]['email']; ?>">
+            </div>
+            <br>
+            <input type="checkbox"> Zezwól na dodawanie mnie do projektów
+            <hr>
+            <input type="checkbox"> Zezwól na podgląd mojego profilu
+            <hr>
+            <input type="checkbox"> coś
+            <?php
+
+            var_dump($data);
+
+            ?>
+            <hr>
+            <button type="submit" class="btn btn-primary">Zapisz</button>
+        </form>
+        <br>
 
     </div>
 
